@@ -1,1 +1,5 @@
-@import '../layout/App.scss'
+@import '../utils/variables.scss';
+@import '../utils/global.scss';
+
+@import '../layout/App.scss';
+@import '../../components/Navbar.scss';
