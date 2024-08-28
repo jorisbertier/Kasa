@@ -3,13 +3,19 @@ import Logo from '../../assets/images/LOGO.png'
 function Navbar() {
     return (
         <nav>
-            <div>
-                <img src={Logo} alt="logo du site Kasa"/>
+            <div className="nav__wrapper">
+                <a>
+                    <img src={Logo} alt="logo du site Kasa"/>
+                </a>
             </div>
-            <div>
+            <div className='nav__wrapper'>
                 <ul>
-                    <li>Accueil</li>
-                    <li>A propos</li>
+                    <a href="#">
+                        <li>Accueil</li>
+                    </a>
+                    <a href="#">
+                        <li>A propos</li>
+                    </a>
                 </ul>
             </div>
         </nav>
