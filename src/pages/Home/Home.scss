@@ -1,0 +1,32 @@
+.home {
+    width: 90%;
+    background-color: $second-color;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 20px;
+    flex-wrap: wrap;
+    
+    gap: 50px;
+    
+    &__gallery {
+        background-color: red;
+        border-radius: 10px;
+        height: 350px;
+        width: 350px;
+        position: relative;
+
+        &--title {
+            position: absolute;
+            left: 10px;
+            bottom: 20px;
+            color: $white;
+            font-size: 18px;
+            font-weight: 600;
+        }
+    }
+}

@@ -1,5 +1,5 @@
 footer {
-    background-color: black;
+    background-color: $black;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11,6 +11,6 @@ footer {
         height: 40px;
     }
     div {
-        color: white;
+        color: $white;
     }
 }
