@@ -14,12 +14,20 @@
     &--arrowl {
         position: absolute;
         top: 50%;
-        left: 0;
+        left: 10px;
+        .arrowLeft {
+            font-size: 50px;
+            color: $white;
+        }
     }
     &--arrowr {
         position: absolute;
         top: 50%;
-        right: 0;
+        right: 10px;
+        .arrowRight {
+            font-size: 50px;
+            color: $white;
+        }
     }
 }
 
@@ -116,6 +124,7 @@
         .property__review--rating {
             display: flex;
             justify-content: flex-end;
+            gap: 5px;
         }
     }
 }

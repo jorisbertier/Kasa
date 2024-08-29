@@ -1,14 +1,18 @@
 import Image from '../../assets/images/Background.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faStar } from '@fortawesome/free-solid-svg-icons'
+import { faStar, faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
 
 function AboutRental() {
     return (
         <div className="wrapper">
             <div className="carrusel__wrapper">
                 <img src={Image} className="carrusel__wrapper--gallery"/>
-                <div className="carrusel__wrapper--arrowl">tttt</div>
-                <div className="carrusel__wrapper--arrowr">ttt</div>
+                <div className="carrusel__wrapper--arrowl">
+                    <FontAwesomeIcon className='arrowLeft' icon={faChevronLeft}/>
+                </div>
+                <div className="carrusel__wrapper--arrowr">
+                    <FontAwesomeIcon className='arrowRight' icon={faChevronRight} />
+                </div>
             </div>
 
             <div className="property__wrapper">
