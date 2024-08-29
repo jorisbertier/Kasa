@@ -1,4 +1,6 @@
 import Image from '../../assets/images/Background.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faStar } from '@fortawesome/free-solid-svg-icons'
 
 function AboutRental() {
     return (
@@ -33,7 +35,11 @@ function AboutRental() {
                         <img src={Image} className="property__review--profil"/>
                     </div>
                     <div className="property__review--rating">
-                    
+                        <FontAwesomeIcon className="star" icon={faStar} />
+                        <FontAwesomeIcon className="star" icon={faStar} />
+                        <FontAwesomeIcon className="star" icon={faStar} />
+                        <FontAwesomeIcon className="star" icon={faStar} />
+                        <FontAwesomeIcon className="star" icon={faStar} />
                     </div>
                     <div className="">
                         <h4 className="property__dropdown--">Description</h4>
