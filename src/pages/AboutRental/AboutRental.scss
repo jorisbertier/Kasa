@@ -1,0 +1,95 @@
+
+.carrusel__wrapper {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    border-radius: 20px;
+
+    &--gallery {
+        width: 100%;
+        object-fit: cover;
+        height: 415px;
+        border-radius: 20px;
+    }
+    &--arrowl {
+        position: absolute;
+        top: 50%;
+        left: 0;
+    }
+    &--arrowr {
+        position: absolute;
+        top: 50%;
+        right: 0;
+    }
+}
+
+.property__wrapper {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    .property__bloc1 {
+        display: flex;
+        justify-content: left;
+        text-align: left;
+        width: 55%;
+        .property__details {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin: 0 auto;
+            .property__header {
+                width: 100%;
+                &--title {
+                    margin-bottom: 5px;
+                    color: $main-color;
+                    font-weight: 500;
+                }
+                &--subtitle {
+                    color: $black;
+                    font-weight: 600;
+                    font-size: 16px;
+                }
+            }
+            .property__tags {
+                display: flex;
+                gap: 10px;
+                margin-top: 15px;
+                .property__tag--tag {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: $main-color;
+                    color: $white;
+                    width: 115px;
+                    border-radius: 10px;
+                    height: 25px;
+                }
+            }
+            .property__dropdown {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: $main-color;
+                width: 90%;
+                height: 50px;
+                border-radius: 10px;
+                margin-top: 15px;
+
+                &--title {
+                    margin-left: 10px;
+                    color: $white;
+                    font-weight: 500;
+                }
+                &--down {
+                    margin-right: 10px;
+                    color: $white;
+                }
+            }
+        }
+    }
+    .property__bloc2 {
+        width: 45%;
+        height: 50px;
+        background-color: blue;
+    }
+}

@@ -1,7 +1,11 @@
 @import '../utils/variables.scss';
 @import '../utils/global.scss';
 
+/* Pages*/
 @import '../../pages/Home/Home.scss';
+@import '../../pages/AboutRental/AboutRental.scss';
+
+/* Component */ 
 @import '../../components/Navbar/Navbar.scss';
 @import '../../components/Header/Header.scss';
 @import '../../components/Footer/Footer.scss';
