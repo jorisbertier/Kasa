@@ -7,10 +7,10 @@ function About() {
         <div>
             <Banner image={image} />
             <div className='about__wrapper'>
-                <DropDown title="Description" width="75%"/>
-                <DropDown title="Respect" width="75%"/>
-                <DropDown title="Service" width="75%"/>
-                <DropDown title="Sécurité" width="75%"/>
+                <DropDown title="Description" width="75%" margin="0 auto" heigth="52px"/>
+                <DropDown title="Respect" width="75%" margin="0 auto" heigth="52px"/>
+                <DropDown title="Service" width="75%" margin="0 auto" heigth="52px"/>
+                <DropDown title="Sécurité" width="75%" margin="0 auto" heigth="52px"/>
             </div>
         </div>
     )

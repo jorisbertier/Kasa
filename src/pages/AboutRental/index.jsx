@@ -1,6 +1,7 @@
 import Image from '../../assets/images/Background.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar, faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
+import DropDown from '../../components/DropDown'
 
 function AboutRental() {
     return (
@@ -27,10 +28,7 @@ function AboutRental() {
                             <div className="property__tag--tag">cozy</div>
                             <div className="property__tag--tag">cozy</div>
                         </div>
-                        <div className="property__dropdown">
-                            <h4 className="property__dropdown--title">Description</h4>
-                            <div className="property__dropdown--down">text</div>
-                        </div>
+                        <DropDown title="Description" width="60%" height="52px"/>
                     </div>
                 </div>
                 <div className="property__bloc2">
@@ -42,13 +40,10 @@ function AboutRental() {
                         <FontAwesomeIcon className="star" icon={faStar} />
                         <FontAwesomeIcon className="star" icon={faStar} />
                         <FontAwesomeIcon className="star" icon={faStar} />
-                        <FontAwesomeIcon className="star" icon={faStar} />
-                        <FontAwesomeIcon className="star" icon={faStar} />
+                        <FontAwesomeIcon className="star2" icon={faStar} />
+                        <FontAwesomeIcon className="star2" icon={faStar} />
                     </div>
-                    <div className="">
-                        <h4 className="property__dropdown--">Description</h4>
-                        <div className="property__dropdown--">text</div>
-                    </div>
+                    <DropDown title="Equipements" width="100%" height="52px"/>
                 </div>
             </div>
         </div>
