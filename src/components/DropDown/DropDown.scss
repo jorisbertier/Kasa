@@ -1,0 +1,20 @@
+.about__dropDown {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $main-color;
+    height: 52px;
+    margin: 0 auto;
+    border-radius: 5px;
+    &--title {
+        color: $white;
+        margin-left: 10px;
+    }
+    &--up {
+        margin-right: 10px;
+        .dropDownUp {
+            color: $white;
+            font-size: 25px;
+        }
+    }
+}

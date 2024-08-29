@@ -1,11 +1,14 @@
 @import '../utils/variables.scss';
 @import '../utils/global.scss';
 
+/* Component */ 
+@import '../../components/Navbar/Navbar.scss';
+@import '../../components/Footer/Footer.scss';
+@import '../../components/Banner/Banner.scss';
+@import '../../components/DropDown/DropDown.scss';
+
 /* Pages*/
 @import '../../pages/Home/Home.scss';
 @import '../../pages/AboutRental/AboutRental.scss';
+@import '../../pages/About/About.scss';
 
-/* Component */ 
-@import '../../components/Navbar/Navbar.scss';
-@import '../../components/Header/Header.scss';
-@import '../../components/Footer/Footer.scss';

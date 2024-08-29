@@ -1,9 +1,10 @@
-import Header from "../../components/Header"
+import Banner from "../../components/Banner"
+import image from '../../assets/images/ile.png'
 
 function Home() {
     return (
     <div>
-        <Header/>
+        <Banner image={image} title="Chez vous, partout et ailleurs"/>
         <div className="home">
             <div className="home__gallery">
                 <img className="home__gallery--image"/>

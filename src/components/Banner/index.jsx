@@ -1,14 +1,12 @@
-import image from '../../assets/images/ile.png'
-
-function Header() {
+function Banner({image, title = ''}) {
     return (
         <header>
             <div className="header__wrapper">
                 <img src={image} alt=""/>
-                <h1>Chez vous, partout et ailleurs</h1>
+                <h1>{title}</h1>
             </div>
         </header>
     )
 }
 
-export default Header
+export default Banner
