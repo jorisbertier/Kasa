@@ -1,0 +1,18 @@
+.error__wrapper {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+    img {
+        margin-top: 50px;
+        height: 260px;
+        width: 600px;
+    }
+    &--title {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        color: $main-color;
+    }
+    a {
+        color: $black;
+    }
+}
