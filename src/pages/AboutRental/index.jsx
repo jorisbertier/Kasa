@@ -27,7 +27,19 @@ function AboutRental() {
                         </div>
                     </div>
                 </div>
-                <div className="property__bloc2"></div>
+                <div className="property__bloc2">
+                    <div className="property__review">
+                        <h3 className="property__review--title">Alexandre <br></br>Dumas</h3>
+                        <img src={Image} className="property__review--profil"/>
+                    </div>
+                    <div className="property__review--rating">
+                    
+                    </div>
+                    <div className="">
+                        <h4 className="property__dropdown--">Description</h4>
+                        <div className="property__dropdown--">text</div>
+                    </div>
+                </div>
             </div>
         </div>
     )
