@@ -2,8 +2,18 @@ import Image from '../../assets/images/Background.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar, faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
 import DropDown from '../../components/DropDown'
+import { useParams } from 'react-router-dom'
+import data from '../../datas/Data.json';
 
 function AboutRental() {
+
+    const {idRent} = useParams()
+
+    const rent = data.reduce((acc,element) => {
+        return element.id === idRent ? element : acc
+    });
+
+    console.log(rent)    
     return (
         <div className="wrapper">
             <div className="carrusel__wrapper">

@@ -6,7 +6,6 @@ import { Link } from "react-router-dom"
 
 function Home() {
 
-    console.log(data)
     return (
     <div>
         <Banner image={image} title="Chez vous, partout et ailleurs"/>
