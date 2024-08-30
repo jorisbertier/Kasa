@@ -70,9 +70,13 @@
                     align-items: center;
                     background-color: $main-color;
                     color: $white;
-                    width: 115px;
+                    width: auto;
                     border-radius: 10px;
-                    height: 25px;
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    height: 30px;
+                    font-size: 14px;
+                    font-weight: 600;
                 }
             }
             .property__dropdown {

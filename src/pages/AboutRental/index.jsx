@@ -12,7 +12,6 @@ function AboutRental() {
     const rent = data.reduce((acc,element) => {
         return element.id === idRent ? element : acc
     });
-
     console.log(rent)    
     return (
         <div className="wrapper">
@@ -30,28 +29,26 @@ function AboutRental() {
                 <div className="property__bloc1">
                     <div className="property__details">
                         <div className="property__header">
-                            <h2 className="property__header--title">Cozy loft on the canal Saint-Martin</h2>
-                            <span className="property__header--subtitle">Paris ile de France</span>
+                            <h2 className="property__header--title">{rent.title}</h2>
+                            <span className="property__header--subtitle">{rent.location}</span>
                         </div>
                         <div className="property__tags">
-                            <div className="property__tag--tag">cozy</div>
-                            <div className="property__tag--tag">cozy</div>
-                            <div className="property__tag--tag">cozy</div>
+                            {rent.tags.map((tag, index) =>(
+                                <div className="property__tag--tag" key={`${tag}-${index}`}>{tag}</div>
+                            ))}
                         </div>
                         <DropDown title="Description" width="60%" height="52px"/>
                     </div>
                 </div>
                 <div className="property__bloc2">
                     <div className="property__review">
-                        <h3 className="property__review--title">Alexandre <br></br>Dumas</h3>
-                        <img src={Image} className="property__review--profil"/>
+                        <h3 className="property__review--title">{rent.host.name}</h3>
+                        <img src={rent.host.picture} alt={`Profil ${rent.host.name}`} className="property__review--profil"/>
                     </div>
                     <div className="property__review--rating">
-                        <FontAwesomeIcon className="star" icon={faStar} />
-                        <FontAwesomeIcon className="star" icon={faStar} />
-                        <FontAwesomeIcon className="star" icon={faStar} />
-                        <FontAwesomeIcon className="star2" icon={faStar} />
-                        <FontAwesomeIcon className="star2" icon={faStar} />
+                        {[...Array(5)].map((_, index) => (
+                            <FontAwesomeIcon className={index < rent.rating ? "star" : "star2"} icon={faStar} />
+                        ))}
                     </div>
                     <DropDown title="Equipements" width="100%" height="52px"/>
                 </div>
