@@ -1,0 +1,16 @@
+.home__gallery {
+    background-color: red;
+    border-radius: 10px;
+    height: 350px;
+    width: 350px;
+    position: relative;
+
+    &--title {
+        position: absolute;
+        left: 10px;
+        bottom: 20px;
+        color: $white;
+        font-size: 18px;
+        font-weight: 600;
+    }
+}
