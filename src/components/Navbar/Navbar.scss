@@ -22,6 +22,26 @@ nav {
         gap: 50px;
         li {
             font-size: 24px;
+            font-weight: 600;
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    nav {
+        .nav__wrapper {
+            a img {
+                height: 35px;
+                width: 100px;
+            }
+        }
+        ul {
+            gap: 25px;
+            li {
+                font-size: 12px;
+                text-transform: uppercase;
+                font-weight: 400;
+            }
         }
     }
 }
