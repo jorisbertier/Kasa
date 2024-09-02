@@ -9,7 +9,7 @@ function About() {
     const [isOpenRespect, setIsOpenRespect] = useState(false)
     const [isOpenService, setIsOpenService] = useState(false)
     const [isOpenSecure, setIsOpenSecure] = useState(false)
-    
+
     return(
         <div>
             <Banner image={image} />
@@ -33,16 +33,16 @@ function About() {
                 </div>
                 <div>
                     <DropDown title="Service" width="75%" margin="0 auto" heigth="52px" isOpen={isOpenService} setIsOpen={setIsOpenService}/>
-                    {isOpenService && ( <p className='about__wrapper--text'>La qualité du service est au coeur de notre engagement chez Kasa. Nous veillons à ce que chaque interaction, que
+                    <p className={`about__wrapper--text ${isOpenService ? 'open' : ''}`}>La qualité du service est au coeur de notre engagement chez Kasa. Nous veillons à ce que chaque interaction, que
                         se soit avec nos hôtes ou nos locataires , soit empreinte de respect et de bienveillance.
-                    </p>)}
+                    </p>
                 </div>
                 <div>
                     <DropDown title="Sécurité" width="75%" margin="0 auto" heigth="52px" isOpen={isOpenSecure} setIsOpen={setIsOpenSecure}/>
-                    {isOpenSecure && ( <p className='about__wrapper--text'>La  sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour nos voyageurs, chaque logement, correspond aux critères
+                    <p className={`about__wrapper--text ${isOpenSecure ? 'open' : ''}`}>La  sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour nos voyageurs, chaque logement, correspond aux critères
                         de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standarts sont bien réspectés
                         .Nous organisonségalment des ateliers sur la sécurité domestique pour nos hôtes.
-                    </p>)}
+                    </p>
                 </div>
             </div>
         </div>
