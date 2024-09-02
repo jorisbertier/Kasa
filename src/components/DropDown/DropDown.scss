@@ -3,9 +3,9 @@
     justify-content: space-between;
     align-items: center;
     background-color: $main-color;
-    // height: 52px;
-    // margin: 0 auto;
     border-radius: 5px;
+    position: relative;
+    z-index: 2;
     &--title {
         color: $white;
         margin-left: 10px;

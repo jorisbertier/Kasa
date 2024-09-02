@@ -14,16 +14,21 @@ function About() {
             <Banner image={image} />
             <div className='about__wrapper'>
                 <div>
-                    <DropDown title="Description" width="75%" margin="0 auto" heigth="52px" isOpen={isOpenDescription} setIsOpen={setIsOpenDescription}/>
+                    {/* <DropDown title="Description" width="75%" margin="0 auto" heigth="52px" isOpen={isOpenDescription} setIsOpen={setIsOpenDescription}/>
                     {isOpenDescription && (<p className='about__wrapper--text'>Les annonces postées sur Kasagarantissent une fiabilité totale.Les photos sont conformes au logements, et toutes
                         les informations régulièrement vérifiées par nos équipes.
-                    </p>)}
+                    </p>)} */}
+                    <DropDown title="Description" width="75%" margin="0 auto" height="52px" isOpen={isOpenDescription} setIsOpen={setIsOpenDescription}/>
+    <p className={`about__wrapper--text ${isOpenDescription ? 'open' : ''}`}>
+    Les annonces postées sur Kasagarantissent une fiabilité totale.Les photos sont conformes au logements, et toutes
+    les informations régulièrement vérifiées par nos équipes.
+    </p>
                 </div>
                 <div>
                     <DropDown title="Respect" width="75%" margin="0 auto" heigth="52px" isOpen={isOpenRespect} setIsOpen={setIsOpenRespect}/>
-                    {isOpenRespect && ( <p className='about__wrapper--text'>La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation
+                    <p className={`about__wrapper--text ${isOpenRespect ? 'open' : ''}`}>La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation
                         du voisinage entraînera une exclusion de notre plateforme.
-                    </p>)}
+                    </p>
                 </div>
                 <div>
                     <DropDown title="Service" width="75%" margin="0 auto" heigth="52px" isOpen={isOpenService} setIsOpen={setIsOpenService}/>

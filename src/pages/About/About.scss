@@ -14,3 +14,21 @@
         border-radius: 0 0 10px 10px;
     }
 }
+
+/*Animations */
+.about__wrapper--text {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-50%);
+    transition: max-height 0.4s ease-in, transform 0.4s ease-in, opacity 0.4s ease-in, padding-top 0.4s ease-in, padding-bottom 0.4s ease-in;
+    padding: 0 3%;
+
+    &.open {
+        opacity: 1;
+        transform: translateY(0);
+        max-height: 500px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
