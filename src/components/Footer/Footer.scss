@@ -14,3 +14,16 @@ footer {
         color: $white;
     }
 }
+
+@media only screen and (max-width: 768px) {
+    footer{
+        gap: 25px;
+        div {
+            width: 100px;
+            font-size: 12px;
+            text-align: center;
+
+        }
+    }
+}
+
