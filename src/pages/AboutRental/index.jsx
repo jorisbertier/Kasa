@@ -4,10 +4,14 @@ import { faStar, faChevronLeft, faChevronRight } from '@fortawesome/free-solid-s
 import DropDown from '../../components/DropDown'
 import { useParams } from 'react-router-dom'
 import data from '../../datas/Data.json';
+import { useState } from 'react';
 
 function AboutRental() {
 
     const {idRent} = useParams()
+
+    const [isOpenDescription, setIsOpenDescription] = useState(false)
+    const [isOpenEquipment, setIsOpenEquipment] = useState(false)
 
     const rent = data.reduce((acc,element) => {
         return element.id === idRent ? element : acc
@@ -37,7 +41,10 @@ function AboutRental() {
                                 <div className="property__tag--tag" key={`${tag}-${index}`}>{tag}</div>
                             ))}
                         </div>
-                        <DropDown title="Description" width="60%" height="52px"/>
+                        <DropDown title="Description" width="60%" height="52px" isOpen={isOpenDescription} setIsOpen={setIsOpenDescription} />
+                        {isOpenDescription && (
+                            <div className="property__dropdown--content">{rent.description}</div>
+                        )}
                     </div>
                 </div>
                 <div className="property__bloc2">
@@ -47,10 +54,15 @@ function AboutRental() {
                     </div>
                     <div className="property__review--rating">
                         {[...Array(5)].map((_, index) => (
-                            <FontAwesomeIcon className={index < rent.rating ? "star" : "star2"} icon={faStar} />
+                            <FontAwesomeIcon className={index < rent.rating ? "star" : "star2"} icon={faStar} key={index}/>
                         ))}
                     </div>
-                    <DropDown title="Equipements" width="100%" height="52px"/>
+                    <DropDown title="Equipements" width="100%" height="52px" isOpen={isOpenEquipment} setIsOpen={setIsOpenEquipment}/>
+                    {isOpenEquipment && (
+                        <div>{rent.equipments.map((equipment) => (
+                            <div>{equipment}</div>
+                        ))}</div>
+                    )}
                 </div>
             </div>
         </div>
