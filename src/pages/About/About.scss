@@ -33,3 +33,11 @@
         padding-bottom: 40px;
     }
 }
+
+@media only screen and (max-width: 768px) {
+    .about__wrapper--text {
+        width: 94%;
+    }
+}
+
+

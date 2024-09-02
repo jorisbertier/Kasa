@@ -6,7 +6,7 @@ function DropDown({title, width, margin = "", height, isOpen, setIsOpen}) {
     function handleOpen() {
         setIsOpen(!isOpen)
     }
-    console.log(isOpen)
+    
     return (
         <div className="about__dropDown" style={{ width: width , margin: margin, height: height}}>
             <h4 className="about__dropDown--title">{title}</h4>

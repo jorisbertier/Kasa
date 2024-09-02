@@ -16,7 +16,7 @@ function AboutRental() {
     const rent = data.reduce((acc,element) => {
         return element.id === idRent ? element : acc
     });
-    console.log(rent)    
+    
     return (
         <div className="wrapper">
             <div className="carrusel__wrapper">
