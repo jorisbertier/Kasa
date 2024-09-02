@@ -5,7 +5,7 @@ import { useLocation } from 'react-router-dom'
 function Navbar() {
 
     const location = useLocation()
-
+    
     return (
         <nav>
             <div className="nav__wrapper">
