@@ -15,6 +15,18 @@
         .dropDownUp {
             color: $white;
             font-size: 25px;
+            cursor: pointer;
         }
     }
+}
+
+/* Animations */
+.openDropdown {
+    transform: rotate(-180deg);
+    transition: all 0.5s;
+}
+
+.closeDropdown {
+    transform: rotate(0);
+    transition: transform 0.5s;
 }

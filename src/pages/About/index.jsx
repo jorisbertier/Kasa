@@ -9,6 +9,7 @@ function About() {
     const [isOpenRespect, setIsOpenRespect] = useState(false)
     const [isOpenService, setIsOpenService] = useState(false)
     const [isOpenSecure, setIsOpenSecure] = useState(false)
+    
     return(
         <div>
             <Banner image={image} />
@@ -19,10 +20,10 @@ function About() {
                         les informations régulièrement vérifiées par nos équipes.
                     </p>)} */}
                     <DropDown title="Description" width="75%" margin="0 auto" height="52px" isOpen={isOpenDescription} setIsOpen={setIsOpenDescription}/>
-    <p className={`about__wrapper--text ${isOpenDescription ? 'open' : ''}`}>
-    Les annonces postées sur Kasagarantissent une fiabilité totale.Les photos sont conformes au logements, et toutes
-    les informations régulièrement vérifiées par nos équipes.
-    </p>
+                    <p className={`about__wrapper--text ${isOpenDescription ? 'open' : ''}`}>
+                        Les annonces postées sur Kasagarantissent une fiabilité totale.Les photos sont conformes au logements, et toutes
+                        les informations régulièrement vérifiées par nos équipes.
+                    </p>
                 </div>
                 <div>
                     <DropDown title="Respect" width="75%" margin="0 auto" heigth="52px" isOpen={isOpenRespect} setIsOpen={setIsOpenRespect}/>
