@@ -16,17 +16,38 @@ function AboutRental() {
     const rent = data.reduce((acc,element) => {
         return element.id === idRent ? element : acc
     });
-    
+
+    let [currentIndex, setCurrentIndex] = useState(0)
+    const array = rent.pictures
+
+    function handleNext() {
+        if(currentIndex >= array.length - 1) {
+            setCurrentIndex(currentIndex = 0)
+        } else {
+            setCurrentIndex(currentIndex + 1)
+        }
+    }
+
+    function handlePrev() {
+        if(currentIndex <= 0) {
+            setCurrentIndex(currentIndex = array.length - 1)
+        } else {
+            setCurrentIndex(currentIndex - 1)
+        }
+        console.log(currentIndex)
+    }
+
     return (
         <div className="wrapper">
             <div className="carrusel__wrapper">
-                <img src={Image} className="carrusel__wrapper--gallery"/>
+                <img src={array[currentIndex]} className="carrusel__wrapper--gallery" alt="test"/>
                 <div className="carrusel__wrapper--arrowl">
-                    <FontAwesomeIcon className='arrowLeft' icon={faChevronLeft}/>
+                    <FontAwesomeIcon className='arrowLeft' icon={faChevronLeft} onClick={handlePrev}/>
                 </div>
                 <div className="carrusel__wrapper--arrowr">
-                    <FontAwesomeIcon className='arrowRight' icon={faChevronRight} />
+                    <FontAwesomeIcon className='arrowRight' icon={faChevronRight} onClick={handleNext}/>
                 </div>
+                <div className='carrusel__wrapper--number'>1/4</div>
             </div>
 
             <div className="property__wrapper">

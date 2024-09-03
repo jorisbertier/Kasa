@@ -16,3 +16,38 @@
         color: $black;
     }
 }
+
+@media only screen and (max-width: 768px) {
+    .error__wrapper {
+        img {
+            margin-top: 50px;
+            height: 130px;
+            width: 300px;
+        }
+
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .error__wrapper {
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 125px;
+        img {
+            margin-top: 100px;
+            height: 90px;
+            width: 200px;
+        }
+        &--title {
+            font-weight: 500;
+            margin-top: 100px;
+            margin-bottom: 100px;
+
+        }
+        a {
+            color: $black;
+            font-weight: 600;
+        }
+
+    }
+}
