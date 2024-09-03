@@ -30,3 +30,14 @@
     transform: rotate(0);
     transition: transform 0.5s;
 }
+
+
+
+
+@media only screen and (max-width: 500px) {
+    .about__dropDown {
+        &--title {
+            font-size: 13px;
+        }
+    }
+}

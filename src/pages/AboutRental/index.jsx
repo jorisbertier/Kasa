@@ -1,4 +1,3 @@
-import Image from '../../assets/images/Background.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar, faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
 import DropDown from '../../components/DropDown'
@@ -92,7 +91,7 @@ function AboutRental() {
                 <div className='collaspe__wrapper--equipment'>
                     <DropDown title="Equipements" width="100%" height="52px" isOpen={isOpenEquipment} setIsOpen={setIsOpenEquipment}/>
                     {isOpenEquipment && (
-                        <div>{rent.equipments.map((equipment) => (
+                        <div className='property__dropdown--content'>{rent.equipments.map((equipment) => (
                             <div>{equipment}</div>
                         ))}</div>
                     )}
