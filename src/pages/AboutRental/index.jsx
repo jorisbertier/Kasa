@@ -84,13 +84,13 @@ function AboutRental() {
             </div>
             <div className='collaspe__wrapper'>
                 <div className='collaspe__wrapper--description'>
-                    <DropDown title="Description" width="50%" height="52px" isOpen={isOpenDescription} setIsOpen={setIsOpenDescription} />
+                    <DropDown title="Description" width="100%" height="52px" isOpen={isOpenDescription} setIsOpen={setIsOpenDescription} />
                     {isOpenDescription && (
                         <div className="property__dropdown--content">{rent.description}</div>
                     )}
                 </div>
                 <div className='collaspe__wrapper--equipment'>
-                    <DropDown title="Equipements" width="40%" height="52px" isOpen={isOpenEquipment} setIsOpen={setIsOpenEquipment}/>
+                    <DropDown title="Equipements" width="100%" height="52px" isOpen={isOpenEquipment} setIsOpen={setIsOpenEquipment}/>
                     {isOpenEquipment && (
                         <div>{rent.equipments.map((equipment) => (
                             <div>{equipment}</div>

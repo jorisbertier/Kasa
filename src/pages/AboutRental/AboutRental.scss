@@ -164,6 +164,20 @@
     }
 }
 
+.collaspe__wrapper {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    &--description {
+        width: 47%;
+    }
+    &--equipment {
+        width: 47%;
+    }
+}
+
 @media only screen and (max-width: 500px) {
     .wrapper {
         .carrusel__wrapper {
