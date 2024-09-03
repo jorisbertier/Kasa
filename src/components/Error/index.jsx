@@ -17,7 +17,7 @@ function Error() {
     }, [])
     return(
         <div className='error__wrapper'>
-            <img src={ErrorImage} alt="Error 404 image" />
+            <img src={ErrorImage} alt="Error 404 image"/>
             <h2 className='error__wrapper--title'>Oups! La page que {isSmallScreen ? <><br/>vous</> : 'vous'} demandez n'existe pas.</h2>
             <Link to="/">
                 Retourner sur la page d'accueil

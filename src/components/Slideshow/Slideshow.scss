@@ -1,0 +1,55 @@
+.carrusel__wrapper {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    border-radius: 20px;
+
+    &--gallery {
+        width: 100%;
+        object-fit: cover;
+        height: 415px;
+        border-radius: 20px;
+    }
+    &--arrowl {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 10px;
+        .arrowLeft {
+            font-size: 50px;
+            color: $white;
+        }
+    }
+    &--arrowr {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 10px;
+        .arrowRight {
+            font-size: 50px;
+            color: $white;
+        }
+    }
+    &--number {
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        transform: translateX(-50%);
+        color: $white;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .wrapper {
+        .carrusel__wrapper {
+            img {
+                height: 265px;
+            }
+        }
+    }
+    .arrowLeft, .arrowRight {
+        font-size: 30px!important;
+    }
+}
