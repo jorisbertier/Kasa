@@ -29,6 +29,12 @@
             color: $white;
         }
     }
+    &--number {
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        color: $white;
+    }
 }
 
 .property__wrapper {

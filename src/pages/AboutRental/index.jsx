@@ -47,7 +47,7 @@ function AboutRental() {
                 <div className="carrusel__wrapper--arrowr">
                     <FontAwesomeIcon className='arrowRight' icon={faChevronRight} onClick={handleNext}/>
                 </div>
-                <div className='carrusel__wrapper--number'>1/4</div>
+                <div className='carrusel__wrapper--number'>{currentIndex + 1}/{array.length}</div>
             </div>
 
             <div className="property__wrapper">
