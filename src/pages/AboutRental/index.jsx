@@ -36,6 +36,7 @@ function AboutRental() {
         }
     }
     const hidden = allPictures.length !== 1;
+
     return (
         <div className="wrapper">
             <div className="carrusel__wrapper">
@@ -66,10 +67,6 @@ function AboutRental() {
                                 <div className="property__tag--tag" key={`${tag}-${index}`}>{tag}</div>
                             ))}
                         </div>
-                        <DropDown title="Description" width="60%" height="52px" isOpen={isOpenDescription} setIsOpen={setIsOpenDescription} />
-                        {isOpenDescription && (
-                            <div className="property__dropdown--content">{rent.description}</div>
-                        )}
                     </div>
                 </div>
                 <div className="property__bloc2">
@@ -82,7 +79,18 @@ function AboutRental() {
                             <FontAwesomeIcon className={index < rent.rating ? "star" : "star2"} icon={faStar} key={index}/>
                         ))}
                     </div>
-                    <DropDown title="Equipements" width="100%" height="52px" isOpen={isOpenEquipment} setIsOpen={setIsOpenEquipment}/>
+
+                </div>
+            </div>
+            <div className='collaspe__wrapper'>
+                <div className='collaspe__wrapper--description'>
+                    <DropDown title="Description" width="50%" height="52px" isOpen={isOpenDescription} setIsOpen={setIsOpenDescription} />
+                    {isOpenDescription && (
+                        <div className="property__dropdown--content">{rent.description}</div>
+                    )}
+                </div>
+                <div className='collaspe__wrapper--equipment'>
+                    <DropDown title="Equipements" width="40%" height="52px" isOpen={isOpenEquipment} setIsOpen={setIsOpenEquipment}/>
                     {isOpenEquipment && (
                         <div>{rent.equipments.map((equipment) => (
                             <div>{equipment}</div>
