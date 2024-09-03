@@ -18,10 +18,10 @@ function AboutRental() {
     });
 
     let [currentIndex, setCurrentIndex] = useState(0)
-    const array = rent.pictures
+    const allPictures = rent.pictures
 
     function handleNext() {
-        if(currentIndex >= array.length - 1) {
+        if(currentIndex >= allPictures.length - 1) {
             setCurrentIndex(currentIndex = 0)
         } else {
             setCurrentIndex(currentIndex + 1)
@@ -30,24 +30,28 @@ function AboutRental() {
 
     function handlePrev() {
         if(currentIndex <= 0) {
-            setCurrentIndex(currentIndex = array.length - 1)
+            setCurrentIndex(currentIndex = allPictures.length - 1)
         } else {
             setCurrentIndex(currentIndex - 1)
         }
-        console.log(currentIndex)
     }
-
+    const hidden = allPictures.length !== 1;
     return (
         <div className="wrapper">
             <div className="carrusel__wrapper">
-                <img src={array[currentIndex]} className="carrusel__wrapper--gallery" alt="test"/>
-                <div className="carrusel__wrapper--arrowl">
-                    <FontAwesomeIcon className='arrowLeft' icon={faChevronLeft} onClick={handlePrev}/>
-                </div>
-                <div className="carrusel__wrapper--arrowr">
-                    <FontAwesomeIcon className='arrowRight' icon={faChevronRight} onClick={handleNext}/>
-                </div>
-                <div className='carrusel__wrapper--number'>{currentIndex + 1}/{array.length}</div>
+                <img src={allPictures[currentIndex]} className="carrusel__wrapper--gallery" alt={`Carusel pictures ${rent.host.name}`}/>
+                {hidden ? (
+                <>
+                    <div className="carrusel__wrapper--arrowl">
+                        <FontAwesomeIcon className='arrowLeft' icon={faChevronLeft} onClick={handlePrev}/>
+                    </div>
+                    <div className="carrusel__wrapper--arrowr">
+                        <FontAwesomeIcon className='arrowRight' icon={faChevronRight} onClick={handleNext}/>
+                    </div>
+                    <div className='carrusel__wrapper--number'>{currentIndex + 1}/{allPictures.length}</div>
+                </>
+            ) : null
+            }
             </div>
 
             <div className="property__wrapper">

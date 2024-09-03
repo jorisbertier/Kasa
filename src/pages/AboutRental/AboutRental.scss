@@ -12,6 +12,7 @@
         border-radius: 20px;
     }
     &--arrowl {
+        cursor: pointer;
         position: absolute;
         top: 50%;
         left: 10px;
@@ -21,6 +22,7 @@
         }
     }
     &--arrowr {
+        cursor: pointer;
         position: absolute;
         top: 50%;
         right: 10px;
