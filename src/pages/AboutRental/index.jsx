@@ -1,9 +1,9 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 import DropDown from '../../components/DropDown'
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import data from '../../datas/Data.json';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Slideshow from '../../components/Slideshow';
 
 function AboutRental() {
@@ -16,6 +16,15 @@ function AboutRental() {
     const rent = data.reduce((acc,element) => {
         return element.id === idRent ? element : acc
     });
+
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        if(idRent !== rent.id) {
+            console.log('error')
+            navigate('/*');
+        }
+    })
 
     return (
         <div className="wrapper">
@@ -56,10 +65,10 @@ function AboutRental() {
                     
                 </div>
                 <div className='collaspe__wrapper--equipment'>
-                    <DropDown title="Equipements" width="100%" height="52px" isOpen={isOpenEquipment} setIsOpen={setIsOpenEquipment}/>
+                    <DropDown title="Équipements" width="100%" height="52px" isOpen={isOpenEquipment} setIsOpen={setIsOpenEquipment}/>
 
-                        <div className={`property__dropdown--content ${isOpenEquipment ? 'open' : ''}`}>{rent.equipments.map((equipment) => (
-                            <div>{equipment}</div>
+                        <div className={`property__dropdown--content ${isOpenEquipment ? 'open' : ''}`}>{rent.equipments.map((equipment, index) => (
+                            <div key={`${equipment}-${index}`}>{equipment}</div>
                         ))}</div>
                 </div>
             </div>
