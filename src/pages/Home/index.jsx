@@ -8,7 +8,9 @@ function Home() {
 
     return (
     <div>
-        <Banner image={image} title="Chez vous, partout et ailleurs"/>
+        <Banner image={image} title="Chez vous, partout et ailleurs" style={{
+                    filter: 'brightness(35%) contrast(100%)'
+                }}/>
         <div className="home">
             {data.map((data) => (
                 <div key={`${data.id}`}>
