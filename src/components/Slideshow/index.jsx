@@ -4,8 +4,8 @@ import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons
 
 function Slideshow({rent}) {
     console.log(rent)
-    let [currentIndex, setCurrentIndex] = useState(0)
-    const allPictures = rent.pictures
+    let [currentIndex, setCurrentIndex] = useState(0);
+    const allPictures = rent.pictures;
 
     function handleNext() {
         if(currentIndex >= allPictures.length - 1) {

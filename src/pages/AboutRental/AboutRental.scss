@@ -210,8 +210,18 @@
     }
     .collaspe__wrapper {
         flex-direction: column;
+        margin-bottom: 0;
         &--description, &--equipment {
             width: 100%;
+        }
+    }
+    .property__dropdown--content {
+        font-size: 12px;
+        margin-bottom: 10px;
+    
+        &.open {
+            padding-top: 20px;
+            padding-bottom: 20px;
         }
     }
 }

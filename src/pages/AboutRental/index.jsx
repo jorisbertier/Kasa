@@ -22,7 +22,7 @@ function AboutRental() {
     useEffect(() => {
         if(idRent !== rent.id) {
             console.log('error')
-            navigate('/*');
+            navigate('/error');
         }
     })
 

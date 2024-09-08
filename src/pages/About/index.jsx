@@ -32,7 +32,7 @@ function About() {
                 <div>
                     <DropDown title="Description" width={dropDownSize} margin="0 auto" height="52px" isOpen={isOpenDescription} setIsOpen={setIsOpenDescription}/>
                     <p className={`about__wrapper--text ${isOpenDescription ? 'open' : ''}`}>
-                        Les annonces postées sur Kasagarantissent une fiabilité totale.Les photos sont conformes au logements, et toutes
+                        Les annonces postées sur Kasa garantissent une fiabilité totale.Les photos sont conformes au logements, et toutes
                         les informations régulièrement vérifiées par nos équipes.
                     </p>
                 </div>

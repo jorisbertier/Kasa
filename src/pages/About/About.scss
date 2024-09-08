@@ -35,8 +35,16 @@
 }
 
 @media only screen and (max-width: 768px) {
+    .about__wrapper {
+        gap: 20px;
+    }
     .about__wrapper--text {
         width: 94%;
+        font-size: 12px;
+        &.open {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
     }
 }
 
