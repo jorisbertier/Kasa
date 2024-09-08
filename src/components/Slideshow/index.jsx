@@ -5,14 +5,20 @@ import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons
 function Slideshow({rent}) {
     console.log(rent)
     let [currentIndex, setCurrentIndex] = useState(0);
+    const [fade, setFade] = useState(false)
     const allPictures = rent.pictures;
 
+    function changeImage(newIndex) {
+        setFade(true);
+        setTimeout(() => {
+            setCurrentIndex(newIndex);
+            setFade(false);
+        }, 500); // Durée de la transition (en ms)
+    }
+
     function handleNext() {
-        if(currentIndex >= allPictures.length - 1) {
-            setCurrentIndex(currentIndex = 0)
-        } else {
-            setCurrentIndex(currentIndex + 1)
-        }
+        const newIndex = currentIndex >= allPictures.length - 1 ? 0 : currentIndex + 1;
+        changeImage(newIndex);
     }
 
     function handlePrev() {
@@ -26,7 +32,7 @@ function Slideshow({rent}) {
 
     return (
         <div className="carrusel__wrapper">
-            <img src={allPictures[currentIndex]} className="carrusel__wrapper--gallery" alt={`Carusel pictures ${rent.host.name}`}/>
+            <img src={allPictures[currentIndex]} className={`carrusel__wrapper--gallery ${fade ? 'fade' : ''}`}  alt={`Carusel pictures ${rent.host.name}`}/>
             {hidden ? (
             <>
                 <div className="carrusel__wrapper--arrowl">

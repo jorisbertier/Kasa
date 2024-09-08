@@ -41,6 +41,15 @@
     }
 }
 
+.carrusel__wrapper--gallery {
+    opacity: 1;
+    transition: opacity 0.5s ease-in;
+    overflow: hidden;
+}
+
+.carrusel__wrapper--gallery.fade {
+    opacity: 0.5;
+}
 @media only screen and (max-width: 500px) {
     .wrapper {
         .carrusel__wrapper {
