@@ -13,7 +13,7 @@ function Slideshow({rent}) {
         setTimeout(() => {
             setCurrentIndex(newIndex);
             setFade(false);
-        }, 500); // Durée de la transition (en ms)
+        }, 500);
     }
 
     function handleNext() {

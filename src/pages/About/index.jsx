@@ -27,7 +27,7 @@ function About() {
 
     return(
         <div>
-            <Banner image={image} />
+            <Banner image={image} style={{filter: 'brightness(75%) contrast(100%)'}}/>
             <div className='about__wrapper'>
                 <div>
                     <DropDown title="Description" width={dropDownSize} margin="0 auto" height="52px" isOpen={isOpenDescription} setIsOpen={setIsOpenDescription}/>
