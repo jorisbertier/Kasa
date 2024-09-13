@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import Home from './pages/Home';
 import '../src/assets/style/main.scss'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import AboutRental from './pages/AboutRental';
@@ -19,7 +19,7 @@ root.render(
         <Route path="/aboutRental/:idRent" element={<AboutRental/>}></Route>
         <Route path="/about" element={<About/>}></Route>
         <Route path="/error" element={<Error/>}></Route>
-        <Route path="*" element={<Error/>}></Route>
+        <Route path="*" element={<Navigate to ='/error' />}></Route>
       </Routes>
       <Footer/>
     </Router>

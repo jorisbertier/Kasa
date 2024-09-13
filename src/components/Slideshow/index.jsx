@@ -19,13 +19,16 @@ function Slideshow({rent}) {
     function handleNext() {
         const newIndex = currentIndex >= allPictures.length - 1 ? 0 : currentIndex + 1;
         changeImage(newIndex);
+        // setCurrentIndex(newIndex)
     }
 
     function handlePrev() {
         if(currentIndex <= 0) {
-            setCurrentIndex(currentIndex = allPictures.length - 1)
+            // setCurrentIndex(currentIndex = allPictures.length - 1)
+            changeImage(currentIndex = allPictures.length - 1);
         } else {
-            setCurrentIndex(currentIndex - 1)
+            // setCurrentIndex(currentIndex - 1)
+            changeImage(currentIndex - 1);
         }
     }
     const hidden = allPictures.length !== 1;
