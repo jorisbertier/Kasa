@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom'
 import { useEffect, useState } from 'react';
 
 function Error() {
-    const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth)
+    const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 768)
 
     useEffect(()=> {
         const handleResize = () => {
-            setIsSmallScreen(window.innerWidth)
+            setIsSmallScreen(window.innerWidth < 768)
         }
         window.addEventListener('resize', handleResize)
 
@@ -17,7 +17,7 @@ function Error() {
     }, [])
     return(
         <div className='error__wrapper'>
-            <img src={ErrorImage} alt="Error 404 image"/>
+            <img src={ErrorImage} alt="Logo error 404"/>
             <h2 className='error__wrapper--title'>Oups! La page que {isSmallScreen ? <><br/>vous</> : 'vous'} demandez n'existe pas.</h2>
             <Link to="/">
                 Retourner sur la page d'accueil
